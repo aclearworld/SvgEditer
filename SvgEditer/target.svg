@@ -5,7 +5,7 @@
     <rect x="0" y="0" width="510" height="270" fill="#ffffff" stroke="#000000" pointer-events="none"/>
     <rect x="70" y="140" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none"/>
     <rect x="253.5" y="140" width="120" height="60" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/>
-    <g transform="translate(180.5,68.5)">
+    <g transform="translate(180.5, 68.5)">
       <switch>
         <foreignObject style="overflow:visible;" pointer-events="all" width="19" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
           <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap;">

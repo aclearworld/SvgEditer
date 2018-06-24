@@ -1,0 +1,13 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400px"
+     height="400px" version="1.1" content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36&quot; version=&quot;8.8.6&quot; editor=&quot;www.draw.io&quot;&gt;&lt;diagram id=&quot;10e2b665-3d56-06e0-a261-3a8d8d7fc03a&quot; name=&quot;Page-1&quot;&gt;zZXBboMwDIafhuOmkpTSHre22y47ddLOKRiIGjAKYdA+/RISShGttEmVNg4o+W0n9ucQPLrO21fJyuwdYxAemcWtRzceIcuQ6LcRjlaY05kVUsljK/mDsOMncGLvVvMYqpGjQhSKl2MxwqKASI00JiU2Y7cExXjXkqUwEXYRE1P1k8cqc2WRcNDfgKdZv7O/WFnLnkWHVGJduP08QpPuseac9Wu5QquMxdhcSHTr0bVEVHaUt2sQBm2Pzca93LCe85ZQqJ8EBDbgi4ka+oy7vNSxZ9FVA8Z/5tHnJuMKdiWLjLXRzddapnKhZ74euuVAKmhvpuSfC9XnBzAHJY/apQ+YOTbu7NCVmzdDJ4L+oGQXXSChE5nrfnpeeyCgBw7CdSDkHwIJx0ACOgXikytAFnfgQe/MI+FCrFGg7GJpzGCZRFqvlMQDXFgW0RL2yX0I0oA+Bn/HcD5hqEtRE46dOIIloeIntu8cDNsSeaG6RIJnL9hohdUKK3t9mgAmeFrosYDELGWgcX2rPTlZoelGpZvDi/TDTDYP8/sgJuFqBHgeLCaA6bWP9vd89XS4IDvbxU+Ibr8B&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(255, 255, 255);">
+  <defs/>
+  <g transform="translate(30,30)">
+    <rect id="hoge" x="10" y="10" width="300" height="300" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <rect id="huga" x="70" y="140" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <rect x="100" y="140" width="120" height="60" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/>
+    <g transform="translate(180.5, 68.5)">
+      <text id="text" x="10" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">text</text>
+    </g>
+  </g>
+</svg>
