@@ -31,12 +31,27 @@ namespace SvgEditer
         /// <summary>
         /// 編集中のレイヤー
         /// </summary>
-        private List<UIElement> editingUiElements = new List<UIElement>();
+        private List<FrameworkElement> editingFrameworkElements = new List<FrameworkElement>();
 
         /// <summary>
         /// 編集中のSvgエレメント
         /// </summary>
         private List<SvgVisualElement> editingSvgVisualElements = new List<SvgVisualElement>();
+
+        /// <summary>
+        /// 編集中のRectangle
+        /// </summary>
+        private  List<Rectangle> editingRectangles = new List<Rectangle>();
+
+        /// <summary>
+        /// 編集中のTextBoxs
+        /// </summary>
+        private  List<TextBox> editingTextBoxs = new List<TextBox>();
+
+        /// <summary>
+        /// 編集中のImages
+        /// </summary>
+        private  List<System.Windows.Controls.Image> editingImages = new List<System.Windows.Controls.Image>();
 
         /// <summary>
         /// 編集対象Svgエレメント:編集Uiエレメント対応定義
@@ -74,8 +89,41 @@ namespace SvgEditer
                         uiElementTypeBySvgVisualElementType => uiElementTypeBySvgVisualElementType.Key == svgElement.GetType());
                     if (!findUiElementTypeBySvgVisualElementType.Equals(default(KeyValuePair<Type, Type>)))
                     {
-                        this.SetTargetSvgVisualElements(findUiElementTypeBySvgVisualElementType.Key, svgElement as SvgVisualElement);
+                        //var svgVisualElementType = findUiElementTypeBySvgVisualElementType.Key;
+                        //var uiElementType = this.uiElementTypesBySvgVisualElementType[svgVisualElementType];
+                        var svgVisualElement  = svgElement as SvgVisualElement;
+                        this.editingSvgVisualElements.Add(svgVisualElement);
 
+                        Rectangle rectangle = null;
+                        Image image = null;
+                        TextBox textBox = null;
+                        switch (svgVisualElement.GetType().ToString())
+                        {
+                            case nameof(SvgRectangle):
+                                SvgRectangle svgRectangle = svgVisualElement as SvgRectangle;
+
+                                rectangle = new Rectangle();
+                                this.editingFrameworkElements.Add(rectangle);
+                                this.editingRectangles.Add(rectangle);
+                                Canvas.SetLeft(rectangle, svgRectangle.X.Value);
+                                Canvas.SetTop(rectangle, svgRectangle.Y.Value);
+
+
+                                
+
+                            case nameof(SvgImage):
+                                image = new Image();
+                                this.editingFrameworkElements.Add(image);
+                                this.editingImages.Add(image);
+                                return image;
+                            case nameof(SvgText):
+                                textBox = new TextBox();
+                                this.editingFrameworkElements.Add(textBox);
+                                this.editingTextBoxs.Add(textBox);
+                                return textBox;
+                            default:
+                                break;
+                        }
 
 
                     }
@@ -90,37 +138,30 @@ namespace SvgEditer
         }
 
         /// <summary>
-        /// 編集対象のSvgエレメントを格納
-        /// </summary>
-        /// <param name="elementType">編集対象のSvgエレメントタイプ</param>
-        /// <param name="svgVisualElement">編集対象のSvgエレメント</param>
-        private void SetTargetSvgVisualElements(Type elementType, SvgVisualElement svgVisualElement)
-        {
-            if (elementType != null &&
-                svgVisualElement != null)
-            {
-                this.editingSvgVisualElements.Add(svgVisualElement);
-                this.GenerateUiElement(elementType, svgVisualElement);
-
-            }
-        }
-
-
-        /// <summary>
         /// Svgエレメント=>Uiエレメント作成
         /// </summary>
-        /// <param name="elementType">編集対象のSvgエレメントタイプ</param>
+        /// <param name="svgVisualElementType">編集対象のSvgエレメントタイプ</param>
         /// <param name="svgVisualElement">編集対象のSvgエレメント</param>
-        private void GenerateUiElement(Type elementType, SvgVisualElement svgVisualElement)
+        private FrameworkElement GenerateUiElement(Type svgVisualElementType, SvgVisualElement svgVisualElement)
         {
-            var uiElementType = this.uiElementTypesBySvgVisualElementType[elementType];
+          
 
-                Activator.CreateInstance(uiElementType);
-
-
-
-            this.editingUiElements.Add();
+            return null;
         }
+
+        /// <summary>
+        /// Canvasにエレメンを描画
+        /// </summary>
+        /// <param name="svgVisualElementType">編集対象のSvgエレメントタイプ</param>
+        /// <param name="svgVisualElement">編集対象のSvgエレメント</param>
+        //private void DrawUiElementToCanvas<T>(T frameworkElement, Type svgVisualElementType, SvgVisualElement svgVisualElement)
+        //    where T : FrameworkElement
+        //{
+        //    new SvgRectangle().X.
+
+        //    svgVisualElement.Path
+
+        //}
 
 
 

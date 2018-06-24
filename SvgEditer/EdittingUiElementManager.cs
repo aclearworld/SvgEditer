@@ -98,11 +98,6 @@ namespace SvgEditer
         public static List<TextBox> EditingTextBoxs { get => editingTextBoxs; set => editingTextBoxs = value; }
         public static List<System.Windows.Controls.Image> EditingImages { get => editingImages; set => editingImages = value; }
 
-
-
-
-
-
         /// <summary>
         /// 
         /// </summary>
@@ -111,6 +106,8 @@ namespace SvgEditer
         {
             return instance;
         }
+
+
 
 
 
